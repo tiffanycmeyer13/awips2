@@ -1,4 +1,4 @@
-name: update station info
+name: update station info test
 
 on:
   workflow_dispatch:
