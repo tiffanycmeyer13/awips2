@@ -1,0 +1,2 @@
+FROM docker.io/tiffanym13/edex:20251202
+COPY data /home/awips/data

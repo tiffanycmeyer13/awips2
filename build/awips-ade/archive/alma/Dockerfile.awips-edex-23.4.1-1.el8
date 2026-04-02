@@ -1,0 +1,12 @@
+#FROM tiffanym13/alma-init:el8
+FROM local/alma-init
+ENV VERSION 23.4.1
+ENV RELEASE 1
+MAINTAINER Tiffany Meyer<tiffanym@ucar.edu>
+
+USER root
+
+RUN ./awips_install.sh --edex
+#RUN ./awips_install.sh --cave
+
+ENTRYPOINT ["/bin/bash"]

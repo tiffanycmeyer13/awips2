@@ -1,0 +1,22 @@
+#FROM tiffanym13/awips-devel-23.4.1-1:el8
+FROM local/r8-init
+ENV VERSION 23.4.1
+ENV RELEASE 1
+MAINTAINER Tiffany Meyer<tiffanym@ucar.edu>
+
+USER root
+
+#COPY el7-dev.repo /etc/yum.repos.d/awips2.repo
+
+#RUN groupadd fxalpha && useradd -G fxalpha awips
+#RUN yum install -y systemd systemd-libs systemd-container
+
+#CMD ["/usr/sbin/init"]
+
+RUN wget https://downloads.unidata.ucar.edu/awips2/current/linux/awips_install.sh
+RUN chmod 775 awips_install.sh
+
+#RUN ./awips_install.sh --edex
+#RUN ./awips_install.sh --cave
+
+ENTRYPOINT ["/bin/bash"]
