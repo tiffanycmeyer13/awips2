@@ -31,5 +31,7 @@
         menuText="Svr Wx Plot" id="spcWxPlot">
     </contribute>
     <contribute xsi:type="subinclude"
+        fileName="menus/spc/OutlookMenus.xml" />
+    <contribute xsi:type="subinclude"
         fileName="menus/ncepHydro/spc/hazardMenus.xml" />
 </menuTemplate>
